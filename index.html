@@ -10,11 +10,11 @@
 <body>
     <div class="container">
         <div class="sidebar">
-        <p class="titles">Dashboard</p>
+        <p class="titles">Llamagram</p>
         </br>
-        <p class="dash home">Home</p>
-        <p class="dash profile">Profile</p>
-        <p class="dash messages">Messages</p>
+        <p class="dash home"><img src="img/home.png" class="icon"> Home</p>
+        <p class="dash profile"><img src="img/profile.png" class="icon"> Profile</p>
+        <p class="dash messages"><img src="img/messages.png" class="icon" alt=""> Messages</p>
         <p class="dash history">History</p>
         <p class="dash tasks">Tasks</p>
         <p class="dash comunities">Communities</p>
@@ -26,19 +26,85 @@
         </div>
 
         <div class="header">
-            <div class="input-bar">
-            <input type="information" name="email" placeholder="Search">
             
-            <div class="profile">
+            <div class="input-bar">
+            <!--flexbox container-->
+                <div><img src="img/mag.png" class="icon"></div>
+                <div><input type="information" name="email" placeholder="Search"></div>
+                <div><img src="img/bell.png" class="icon" style="margin-left: 100px;"></div>
+                <div class="small-pfp"></div>
+                <div>Sam Syed</div>
+            
+            </div>  
+
+
+            <div class="welcome">
+                <div class="large-pfp"> </div>
+                <div class="welcome-child">    
                 <div style="font-size: 15px;font-weight: bolder;">Hi there,</div> 
-                <div style="font-size: 20px;font-weight: bolder;">Sam (@theLlama)</div>
+                <div style="font-size: 20px;font-weight: bolder;">Sam Syed (@theLlama)</div>
             </div>
         </div>
 
             <div class="action"></div>
         </div>
 
-        <div class="dashboard">Dashboard</div>
+        <div class="dashboard">
+            <div class="flex-titles">
+            <p class="titles" style="color: black; font-size: 20px; ">Dashboard</p>
+            </div>
+            
+            <div class="dash-grid">
+                <div class="item one">
+                    <p class="post-title">Super Cool Project</p>
+                    <p class="post-intro">This is a project to create an 
+                        admin page using CSS Grid and intermediate CSS and HTML 
+                        concepts.</p>
+                </div>
+                <div class="item two">
+                    <p class="post-title">Slightly Different Project</p>
+                    <p class="post-intro">This project is more JavaScript
+                        heavy. We use JavaScript to create a UI which allows 
+                        the user to click the buttons resulting in some action. 
+                    </p>
+                </div>
+                <div class="item three">
+                    <p class="post-title">Difficult App Idea</p>
+                    <p class="post-intro">This is an app which has a function which 
+                        is really useful for lots of people. 
+                    </p>
+                </div>
+                <div class="item four">
+                    <p class="post-title"> Easy App Idea</p>
+                    <p class="post-intro">This is an app idea which lets the
+                        user plan their day. This will allow you to optimise your 
+                        time.
+                    </p>      
+                </div>
+                <div class="item five">
+                    <p class="post-title">Differential Geometry Notes</p>
+                    <p class="post-intro">These are some notes on manifolds 
+                        and the use of differential forms in General Relativity. 
+                    </p>
+                </div>
+                <div class="item six">
+                    <p class="post-title">Path Integral Notes</p>
+                    <p class="post-intro">The path integral is a a way to formulate 
+                        quantum mechanics using the principle of least action. 
+                    </p>
+                </div>
+
+                <div class="right-banner">
+                    <div class="assignment">
+
+                    </div>
+                    <div class="trending">
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </body>
 </html>
