@@ -18,6 +18,7 @@
     --primary: white;
     --secondary: black; 
     --button-color: #36454F;
+    --dashboard-color: var(--grey-color); 
 }
 
 .dark{
@@ -25,6 +26,7 @@
     --secondary: var(--grey-color);
     --button-color: white;
     --dash-color: #252a2d; 
+    --dashboard-color: #161c20; 
 }
 
 body{
@@ -36,7 +38,6 @@ body{
     display: grid;
     font-family: var(--font-stack); 
     grid-template: 150px 100% / 200px 100%;
-    row-gap: 1px;
 }
 
 .sidebar{
@@ -50,7 +51,8 @@ body{
     color: white;  
     font-weight: bolder;
     font-size: var(--title-font-size);
-}
+    color: var(--secondary);
+}   
 
 .dash{
     color: white; 
@@ -93,13 +95,11 @@ input{
     display: inline-block;
 }
 
-
 .welcome{
     padding-top: 20px;
     display: flex; 
     gap: 20px;
 }
-
 
 .small-pfp{
     /*border: 1px solid rgb(166, 166, 166);*/
@@ -121,8 +121,7 @@ input{
 
 .dashboard{
     padding-left: 20px; 
-    background-color: var(--grey-color); 
-}   
+}
 
 .dash-grid{
     display: grid;  
@@ -138,10 +137,6 @@ input{
     padding: 20px;
 }
 
-.announcement, .trending{
-    background-color: white;
-}
-
 .post-title{
     font-size: var(--post-title-font-size);
     font-weight: bolder; 
@@ -152,16 +147,28 @@ input{
     color: var(--post-intro-color);
 }
 
-.right-banner{
-    display: grid; 
-    grid-template-columns: repeat(2, 200px) / 100px;
-}
-
 .light-dark{
     background-color: var(--button-color);
     border: 0; 
-    font-family: var(--font-stack);
     font-weight: bolder;
     font-size: 15px;
 } 
 
+.dash-flex{
+    display: flex; 
+    background-color: var(--dashboard-color); 
+    gap: 20px; 
+    /*border: 2px solid red; */
+}
+
+.right-banner{
+    display: grid;
+    grid-template: repeat(2, calc(0.618*var(--dash-grid-width))) / var(--dash-grid-width); 
+    border: 1px solid red; 
+}
+
+.announcements, .trending{
+    background-color: white;
+    font-weight: bolder; 
+    gap: 20px; 
+}

@@ -38,7 +38,7 @@
             </div>  
 
             <div class="welcome">
-                <div class="large-pfp"> </div>
+                <div class="large-pfp"></div>
                 <div class="welcome-child">    
                     <div style="font-size: 15px;font-weight: bolder;">Hi there,</div> 
                     <div style="font-size: 20px;font-weight: bolder;">Usama Aqeel (@theLlama)</div>
@@ -48,79 +48,84 @@
             <div class="action"></div>
         </div>
 
-        <div class="dashboard">
-            <div class="flex-titles">
-            <p class="titles" style="color: black; font-size: 20px; ">Dashboard</p>
+        <div class="dash-flex">
+            <div class="dashboard">
+                <div class="flex-titles">
+                <p class="titles">Dashboard</p>
             </div>
             
             <div class="dash-grid">
-                <div class="item one">
+                <div class="item">
                     <p class="post-title">Super Cool Project</p>
                     <p class="post-intro">This is a project to create an 
                         admin page using CSS Grid and intermediate CSS and HTML 
                         concepts.</p>
                 </div>
-                <div class="item two">
+                <div class="item">
                     <p class="post-title">Slightly Different Project</p>
                     <p class="post-intro">This project is more JavaScript
                         heavy. We use JavaScript to create a UI which allows 
                         the user to click the buttons resulting in some action. 
                     </p>
                 </div>
-                <div class="item three">
-                    <p class="post-title">Difficult App Idea</p>
+                <div class="item">
+    _                <p class="post-title">Difficult App Idea</p>
                     <p class="post-intro">This is an app which has a function which 
                         is really useful for lots of people. 
                     </p>
                 </div>
-                <div class="item four">
+                <div class="item">
                     <p class="post-title"> Easy App Idea</p>
                     <p class="post-intro">This is an app idea which lets the
                         user plan their day. This will allow you to optimise your 
                         time.
                     </p>      
                 </div>
-                <div class="item five">
+                <div class="item">
                     <p class="post-title">Differential Geometry Notes</p>
                     <p class="post-intro">These are some notes on manifolds 
                         and the use of differential forms in General Relativity. 
                     </p>
                 </div>
-                <div class="item six">
+                <div class="item">
                     <p class="post-title">Path Integral Notes</p>
                     <p class="post-intro">The path integral is a a way to formulate 
                         quantum mechanics using the principle of least action. 
                     </p>
                 </div>
-
-                <div class="right-bar">
-                    <div class="assignment">
-                        
-                    </div>
-                    <div class="trending"></div>
-                </div>
-                
+            </div>
+            </div>
+            <div class="right-banner">
+                <div class="announcements">Announcements</div>
+                <div class="trending">Trending</div>
             </div>
         </div>
+    
     </div>
 
     <script>
         var header = document.querySelector('.header');
         var sidebar = document.querySelector('.sidebar'); 
         var item = document.querySelectorAll('.item')
+        var dashboard = document.querySelector('.dashboard');  
+        var dashFlex = document.querySelector('.dash-flex');
+
         function toggle(){
             header.classList.toggle('dark');
             sidebar.classList.toggle('dark');
-            
-            var itemArray = Array.from(item); 
+            dashboard.classList.toggle('dark'); 
+            dashFlex.classList.toggle('dark'); 
 
+            var itemArray = Array.from(item); 
             for (let i = 0; i<itemArray.length; i++){
-                itemArray[i].classList('dark');
-                document.appendChild(itemArray[i]); 
-            };
-            
-            document.appendChild('.header');
-            document.appendChild('.sidebar');
+                itemArray[i].classList.toggle('dark');
+            }; 
+
+            document.appendChild(itemArray);
+            document.appendChild(header);
+            document.appendChild(sidebar);
+            document.appendChild(dashboard);
+            document.appendChild(dashFlex);
         }
 
     </script>
