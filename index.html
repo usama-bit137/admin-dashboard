@@ -10,41 +10,40 @@
 <body>
     <div class="container">
         <div class="sidebar">
-        <p class="titles">Llamagram</p>
+        <p class="titles"> <img src="img/baby-face-outline.png" class="icon">seddit</p>
         </br>
         <p class="dash home"><img src="img/home.png" class="icon"> Home</p>
         <p class="dash profile"><img src="img/profile.png" class="icon"> Profile</p>
         <p class="dash messages"><img src="img/messages.png" class="icon" alt=""> Messages</p>
-        <p class="dash history">History</p>
-        <p class="dash tasks">Tasks</p>
-        <p class="dash comunities">Communities</p>
+        <p class="dash history"><img src="img/history.png" class="icon"> History</p>
+        <p class="dash tasks"><img src="img/tasks.png" class="icon"> Tasks</p>
+        <p class="dash comunities"><img src="img/group.png" class="icon"> Communities</p>
         </br>
         
-        <p class="dash settings">Settings</p>
-        <p class="dash support">Suport</p>
-        <p class="dash privacy">Privacy</p>
+        <p class="dash settings"><img src="img/cog.png" class="icon"> Settings</p>
+        <p class="dash support"><img src="img/support.png" class="icon"> Support</p>
+        <p class="dash privacy"><img src="img/lock.png" class="icon"> Privacy</p>
         </div>
 
         <div class="header">
             
             <div class="input-bar">
             <!--flexbox container-->
-                <div><img src="img/mag.png" class="icon"></div>
-                <div><input type="information" name="email" placeholder="Search"></div>
-                <div><img src="img/bell.png" class="icon" style="margin-left: 100px;"></div>
+                <div class="search"><img src="img/mag.png" class="icon"></div>
+                <div class="search"><input type="information" name="email" placeholder="Search"></div>
+                <button class="small-pfp light-dark" onclick="toggle()"></button>
+                <div class="search"><img src="img/bell.png" class="icon" style="margin-left: 100px;"></div>
                 <div class="small-pfp"></div>
-                <div>Sam Syed</div>
-            
+                <div class="search">Usama Aqeel</div>
             </div>  
-
 
             <div class="welcome">
                 <div class="large-pfp"> </div>
                 <div class="welcome-child">    
-                <div style="font-size: 15px;font-weight: bolder;">Hi there,</div> 
-                <div style="font-size: 20px;font-weight: bolder;">Sam Syed (@theLlama)</div>
+                    <div style="font-size: 15px;font-weight: bolder;">Hi there,</div> 
+                    <div style="font-size: 20px;font-weight: bolder;">Usama Aqeel (@theLlama)</div>
+                </div>
             </div>
-        </div>
 
             <div class="action"></div>
         </div>
@@ -94,17 +93,36 @@
                     </p>
                 </div>
 
-                <div class="right-banner">
+                <div class="right-bar">
                     <div class="assignment">
-
-                    </div>
-                    <div class="trending">
                         
                     </div>
+                    <div class="trending"></div>
                 </div>
                 
             </div>
         </div>
     </div>
+
+    <script>
+        var header = document.querySelector('.header');
+        var sidebar = document.querySelector('.sidebar'); 
+        var item = document.querySelectorAll('.item')
+        function toggle(){
+            header.classList.toggle('dark');
+            sidebar.classList.toggle('dark');
+            
+            var itemArray = Array.from(item); 
+
+            for (let i = 0; i<itemArray.length; i++){
+                itemArray[i].classList('dark');
+                document.appendChild(itemArray[i]); 
+            };
+            
+            document.appendChild('.header');
+            document.appendChild('.sidebar');
+        }
+
+    </script>
 </body>
 </html>
