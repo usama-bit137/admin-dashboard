@@ -12,7 +12,7 @@
     --post-title-font-size: 15px;
     --post-intro-font-size: 10px;
 
-    --dash-grid-height: 150px;
+    --dash-grid-height: 200px;
     --dash-grid-width: calc(1.618*var(--dash-grid-height));
 
     --primary: white;
@@ -20,6 +20,8 @@
     --button-color: #36454F;
     --dashboard-color: var(--grey-color); 
 }
+
+
 
 .dark{
     --primary: #36454F;  
@@ -30,6 +32,7 @@
 }
 
 body{
+    background-color: var(--dashboard-color);
     padding: 0; 
     margin: 0; 
 }
@@ -71,10 +74,14 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
+    max-width: 1000px;
+    min-width: 1000px;
+    justify-content: space-between;
 }
 
 .search{
     position: relative;
+    font-weight: bolder;
 }
 
 input{
@@ -99,11 +106,36 @@ input{
     padding-top: 20px;
     display: flex; 
     gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    min-width: 750px;
+}
+
+.welcome-flex{
+    display: flex;
+    flex: 1;
+    min-width: 250px;
+    max-width: 500px;
+    gap: 20px;
+}
+
+.button-set{
+    display: flex;
+    gap: 25px;
+}
+
+.button-set>button{
+    background-color: var(--dash-color);
+    color: var(--grey-color); 
+    font-weight: bolder;
+    border: 0;
+    border-radius: 50px;
+    padding: 10px 20px;
 }
 
 .small-pfp{
-    /*border: 1px solid rgb(166, 166, 166);*/
-    border-radius: var(--upper-radius); 
+    border-radius:100%; 
     height: var(--upper-radius); 
     width: var(--upper-radius);  
     background-color: #f0b429; 
@@ -111,8 +143,7 @@ input{
 }
 
 .large-pfp{
-    /*border: 1px solid rgb(166, 166, 166);*/
-    border-radius: var(--lower-radius); 
+    border-radius: 100%; 
     height: var(--lower-radius); 
     width: var(--lower-radius);  
     background-color: #f0b429; 
@@ -158,17 +189,49 @@ input{
     display: flex; 
     background-color: var(--dashboard-color); 
     gap: 20px; 
-    /*border: 2px solid red; */
 }
 
 .right-banner{
     display: grid;
-    grid-template: repeat(2, calc(0.618*var(--dash-grid-width))) / var(--dash-grid-width); 
-    border: 1px solid red; 
+    grid-template: repeat(2, 232px) / var(250px); 
 }
 
 .announcements, .trending{
-    background-color: white;
-    font-weight: bolder; 
-    gap: 20px; 
+    background-color: var(--primary);
+    border-radius: 10px;
+    height: 270px; 
+    width: 250px;
+    padding: 10px;
+}
+
+.announcements{
+    grid-template-rows: 1/2;
+}
+
+.announce-item, .trending-item{
+    color: var(--secondary);
+    padding: 10px ;
+}
+
+.announce-title, .trending-title{
+    font-size: 12px;
+}
+
+.trending-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal
+}
+
+.trending-item{
+    margin-bottom: 10px;
+}
+
+.one, .two, .three{
+    border-bottom: 2px solid var(--dashboard-color); 
+}
+
+.trending{
+    grid-template-rows: 2/3;
 }

@@ -28,22 +28,33 @@
         <div class="header">
             
             <div class="input-bar">
-            <!--flexbox container-->
                 <div class="search"><img src="img/mag.png" class="icon"></div>
                 <div class="search"><input type="information" name="email" placeholder="Search"></div>
                 <button class="small-pfp light-dark" onclick="toggle()"></button>
-                <div class="search"><img src="img/bell.png" class="icon" style="margin-left: 100px;"></div>
-                <div class="small-pfp"></div>
+                <div class="search"><img src="img/bell.png" class="icon" style="margin-left: 200px;"></div>
+                <div class="small-pfp"><img src="img/thellama.jpg" class="small-pfp"></div>
                 <div class="search">Usama Aqeel</div>
             </div>  
 
+            
+            
             <div class="welcome">
-                <div class="large-pfp"></div>
-                <div class="welcome-child">    
-                    <div style="font-size: 15px;font-weight: bolder;">Hi there,</div> 
-                    <div style="font-size: 20px;font-weight: bolder;">Usama Aqeel (@theLlama)</div>
+                <div class="welcome-flex">
+                    <div class="large-pfp"><img src="img/thellama.jpg" class="large-pfp"></div>
+                    <div class="welcome-child">    
+                        <div style="font-size: 15px;font-weight: bolder;">Hi there,</div> 
+                        <div style="font-size: 20px;font-weight: bolder;">Usama Aqeel (@theLlama)</div>
+                    </div>
+                </div>
+
+                <div class="button-set">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
                 </div>
             </div>
+
+
 
             <div class="action"></div>
         </div>
@@ -69,7 +80,7 @@
                     </p>
                 </div>
                 <div class="item">
-    _                <p class="post-title">Difficult App Idea</p>
+                    <p class="post-title">Difficult App Idea</p>
                     <p class="post-intro">This is an app which has a function which 
                         is really useful for lots of people. 
                     </p>
@@ -95,9 +106,45 @@
                 </div>
             </div>
             </div>
-            <div class="right-banner">
-                <div class="announcements">Announcements</div>
-                <div class="trending">Trending</div>
+            <div class="right-banners">
+                <p class="titles">Announcements</p>
+                <div class="announcements">
+                    <div class="announce-item one">
+                        <p class="announce-title post-title">Site Maintenance</p>
+                        <p class="announce-intro post-intro">This is a project to create an 
+                        admin page using CSS Grid and intermediate CSS and HTML 
+                        concepts.</p>
+                    </div>
+                    <div class="announce-item two">
+                        <p class="announce-title post-title">Community Share Day</p>
+                        <p class="announce-intro post-intro">This is a project to create an 
+                        admin page using CSS Grid and intermediate CSS and HTML 
+                        concepts.</p>
+                    </div>
+                    <div class="announce-item">
+                        <p class="announce-title post-title">Updated Privacy Policy</p>
+                        <p class="announce-intro post-intro">This is a project to create an 
+                        admin page using CSS Grid and intermediate CSS and HTML 
+                        concepts.</p>
+                    </div>
+                </div>
+                <p class="titles">Trending</p>
+                <div class="trending">
+                    <div class="trending-item">
+                        <div class="trending-title post-title"><img src="img/nourani.jpg" class="large-pfp">@nourani</div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-title post-title"><img src="img/pfp.jpeg" class="large-pfp">@jose.smith32</div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-title post-title"><img src="img/thellama.jpg" class="large-pfp">@theLlama</br></div>
+                
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-title post-title"><img class="large-pfp">@integrals4u</div>
+          
+                    </div>
+                </div>
             </div>
         </div>
     
@@ -115,12 +162,13 @@
             sidebar.classList.toggle('dark');
             dashboard.classList.toggle('dark'); 
             dashFlex.classList.toggle('dark'); 
-
+            document.body.classList.toggle('dark');
             var itemArray = Array.from(item); 
             for (let i = 0; i<itemArray.length; i++){
                 itemArray[i].classList.toggle('dark');
             }; 
 
+            
             document.appendChild(itemArray);
             document.appendChild(header);
             document.appendChild(sidebar);
